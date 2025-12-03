@@ -44,7 +44,6 @@ if __name__ == "__main__":
     summaries_test, questions_test, answers_test = dataset_test["报告_sum"], dataset_test["考核-提问"]
 
     for i, (summary, que, ans) in tqdm(enumerate(zip(summaries_test, questions_test, answers_test)), total=len(summaries)):
-        time_0 = time.time()
         rand_i = random.randrange(0, num_of_examples)
         examp_sum = examples[rand_i][0]
         examp_que = examples[rand_i][1]
