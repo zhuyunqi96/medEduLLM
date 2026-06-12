@@ -44,8 +44,8 @@ if __name__ == "__main__":
 
     for i, (summary, que) in tqdm(enumerate(zip(summaries_test, questions_test)), total=len(summaries)):
         rand_i = random.randrange(0, num_of_examples)
-        examp_sum = examples[0]
-        examp_que = examples[1]
+        examp_sum = examples[rand_i][0]
+        examp_que = examples[rand_i][1]
 
         system_content = f"你是一个资深临床医学专家" # content (system)
         user_content = f" # 任务：参考以下报告样例与问题样例，为患者报告写一个提问。\n # 报告样例：{examp_sum}，\n # 问题样例：{examp_que}，\n # 患者报告：{summary}，\n # 输出格式:\n \"提问\": \"\"" # content (user)

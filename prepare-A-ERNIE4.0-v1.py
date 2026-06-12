@@ -40,7 +40,7 @@ if __name__ == "__main__":
     clean_Q_A = []
 
     dataset_test = pd.read_excel("XXXXXX.xlsx")
-    summaries_test, questions_test, answers_test = dataset_test["报告_sum"], dataset_test["考核-提问"]
+    summaries_test, questions_test, answers_test = dataset_test["报告_sum"], dataset_test["考核-提问"], dataset_test["考核-答案"]
 
     for i, (summary, que, ans) in tqdm(enumerate(zip(summaries_test, questions_test, answers_test)), total=len(summaries)):
         rand_i = random.randrange(0, num_of_examples)

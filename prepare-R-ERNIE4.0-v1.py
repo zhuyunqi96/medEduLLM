@@ -24,7 +24,7 @@ if __name__ == "__main__":
     summaries = dataset["报告_sum"]
     questions = dataset["考核-提问"]
     answers = dataset["考核-答案"]
-    reviews = dataset["考核-答案"]
+    reviews = dataset["建议-修正"]
     
     print(f"summaries {len(summaries)}, questions {len(questions)}")
 
